@@ -22,7 +22,7 @@ def get_gemini_analysis(log_text):
 def send_whatsapp(message):
     token = "aSJ8LTKFEQz2GG8L1SYN"
     payload = {
-        "target": "nomor hp yang akan digunakan",
+        "target": "08114316501",
         "message": message,
     }
     headers = {"Authorization": token}
