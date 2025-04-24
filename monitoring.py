@@ -22,7 +22,7 @@ def get_gemini_analysis(log_text):
 def send_whatsapp(message):
     token = "o2tzLryhYTDiJ5G3RE5B"
     payload = {
-        "target": "8114316501",  # Add country code
+        "target": "628114316501",  # Add country code
         "message": message,
     }
     headers = {"Authorization": token}
