@@ -20,9 +20,9 @@ def get_gemini_analysis(log_text):
         return f"⚠️ Gagal mendapatkan analisis dari Gemini: {e}"
 
 def send_whatsapp(message):
-    token = "aSJ8LTKFEQz2GG8L1SYN"
+    token = "o2tzLryhYTDiJ5G3RE5B"
     payload = {
-        "target": "+628114316501",  # Add country code
+        "target": "628114316501",  # Add country code
         "message": message,
     }
     headers = {"Authorization": token}
