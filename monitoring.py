@@ -22,12 +22,18 @@ def get_gemini_analysis(log_text):
 def send_whatsapp(message):
     token = "aSJ8LTKFEQz2GG8L1SYN"
     payload = {
-        "target": "08114316501",
+        "target": "+628114316501",  # Add country code
         "message": message,
     }
     headers = {"Authorization": token}
-    r = requests.post("https://api.fonnte.com/send", data=payload, headers=headers)
-    return r.status_code
+    try:
+        r = requests.post("https://api.fonnte.com/send", data=payload, headers=headers)
+        print(f"WhatsApp API response status: {r.status_code}")
+        print(f"Response content: {r.text}")
+        return r.status_code
+    except Exception as e:
+        print(f"Error sending WhatsApp message: {e}")
+        return None
 
 # Eksekusi semua
 log = get_ssh_attempts()
