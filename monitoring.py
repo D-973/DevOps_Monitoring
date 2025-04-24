@@ -14,7 +14,7 @@ def get_ssh_attempts():
 
 def get_gemini_analysis(log_text):
     try:
-        response = model.generate_content(f"Ada percobaan login brute force:\n{log_text}\nApa yang sebaiknya saya lakukan?. responnya jangan terlalu panjang")
+        response = model.generate_content(f"Ambil percobaan login hanya hari ini saja. Ada percobaan login brute force:\n{log_text}\nApa yang sebaiknya saya lakukan?. responnya jangan terlalu panjang")
         return response.text
     except Exception as e:
         return f"⚠️ Gagal mendapatkan analisis dari Gemini: {e}"
